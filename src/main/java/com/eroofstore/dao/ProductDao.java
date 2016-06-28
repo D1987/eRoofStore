@@ -20,8 +20,32 @@ public class ProductDao {
         product1.setUnitInStock(11);
         product1.setProductManufacturer("РФ");
 
+
+        Product product2 = new Product();
+        product2.setProductName("Шифер");
+        product2.setProductCategory("Крыша");
+        product2.setProductDescription("Шифер для крыши");
+        product2.setProductPrice(900);
+        product2.setProductCondition("Новая");
+        product2.setProductStatus("В наличии");
+        product2.setUnitInStock(5);
+        product2.setProductManufacturer("РФ");
+
+
+        Product product3 = new Product();
+        product3.setProductName("Стек");
+        product3.setProductCategory("Стена");
+        product3.setProductDescription("Стек с крыши");
+        product3.setProductPrice(1000);
+        product3.setProductCondition("Новая");
+        product3.setProductStatus("Нет в наличии");
+        product3.setUnitInStock(0);
+        product3.setProductManufacturer("РБ");
+
         productList = new ArrayList<Product>();
         productList.add(product1);
+        productList.add(product2);
+        productList.add(product3);
         return productList;
     }
 
