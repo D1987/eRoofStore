@@ -16,12 +16,20 @@
                 </div>
 
                 <div class="col-md-5">
-                    <h3>Название товара</h3>
-                    <p>Описание</p>
-                    <p>Производитель</p>
-                    <p>Категория</p>
-                    <p>Состояние</p>
-                    <p>Цена</p>
+                    <h3>${product.productName}</h3>
+                    <p>${product.productDescription}</p>
+
+                    <p>
+                        <strong>Производитель</strong> : ${product.productManufacturer}
+                    </p>
+
+                    <p>
+                        <strong>Категория</strong> : ${product.productCategory}
+                    </p>
+                    <p>
+                        <strong>Состояние</strong> : ${product.productCondition}
+                    </p>
+                    <p>${product.productPrice} руб.</p>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ package com.eroofstore.dao;
 
 import com.eroofstore.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class ProductDao {
         Product product1 = new Product();
 
         product1.setProductName("Черепица");
+        product1.setProductId("P1");
         product1.setProductCategory("Крыша");
         product1.setProductDescription("Черепица для крыши");
         product1.setProductPrice(1200);
@@ -22,6 +24,7 @@ public class ProductDao {
 
 
         Product product2 = new Product();
+        product2.setProductId("P2");
         product2.setProductName("Шифер");
         product2.setProductCategory("Крыша");
         product2.setProductDescription("Шифер для крыши");
@@ -33,6 +36,7 @@ public class ProductDao {
 
 
         Product product3 = new Product();
+        product3.setProductId("P3");
         product3.setProductName("Стек");
         product3.setProductCategory("Стена");
         product3.setProductDescription("Стек с крыши");
@@ -50,4 +54,12 @@ public class ProductDao {
     }
 
 
+    public Product getProductById(String productId) throws IOException {
+        for (Product product: getProductList()){
+            if (product.getProductId().equals(productId)){
+                return product;
+            }
+        }
+        throw new IOException("Товар не найден.");
+    }
 }
