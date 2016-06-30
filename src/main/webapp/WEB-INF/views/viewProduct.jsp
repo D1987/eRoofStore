@@ -18,11 +18,9 @@
                 <div class="col-md-5">
                     <h3>${product.productName}</h3>
                     <p>${product.productDescription}</p>
-
                     <p>
                         <strong>Производитель</strong> : ${product.productManufacturer}
                     </p>
-
                     <p>
                         <strong>Категория</strong> : ${product.productCategory}
                     </p>
