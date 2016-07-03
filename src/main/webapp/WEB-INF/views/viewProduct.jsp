@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <img src="#" alt="image" style="width: 100%; height: 300px">
+                    <img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width:100%"/>
                 </div>
 
                 <div class="col-md-5">
@@ -32,7 +32,6 @@
                 </div>
             </div>
         </div>
-    <%--</div>--%>
-<%--</div>--%>
+
 
 <%@ include file="/WEB-INF/views/template/footer.jsp" %>
