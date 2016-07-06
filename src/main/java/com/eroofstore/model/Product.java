@@ -1,8 +1,10 @@
 package com.eroofstore.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 @Entity
 public class Product {
@@ -10,12 +12,18 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String productId;
+
+    @NotEmpty (message = " Название товара не должно быть пустым!")
     private String productName;
     private String productCategory;
     private String productDescription;
+
+    @Min(value = 0, message = " Цена товара не должна быть равна 0!")
     private double productPrice;
     private String productCondition;
     private String productStatus;
+
+    @Min(value = 0, message = " Скидка на товар не должна быть ниже нуля!")
     private int unitInStock;
     private  String productManufacturer;
 

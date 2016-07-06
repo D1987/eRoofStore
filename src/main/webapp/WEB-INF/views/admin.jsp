@@ -7,6 +7,12 @@
             <h1>Администратор</h1>
             <p class="lead">Кабинет администратора</p>
         </div>
+        
+        <c:if test="${pageContext.request.userPrincipal.name != null}">
+            <h2>
+                Добро пожаловать: ${pageContext.request.userPrincipal.name} <a href="<c:url value="/j_spring_security_logout"/> ">Выйти</a>
+            </h2>
+        </c:if>
 
         <h3>
             <a href="<c:url value="/admin/productInventory" />"> Запас Товаров</a>
