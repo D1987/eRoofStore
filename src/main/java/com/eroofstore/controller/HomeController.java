@@ -28,7 +28,6 @@ public class HomeController {
     @Autowired
     private ProductDao productDao;
 
-
     @RequestMapping("/")
     public String home(){
         return "home";

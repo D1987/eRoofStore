@@ -1,12 +1,11 @@
 package com.eroofstore.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * Created by Dima on 06.07.16.
- */
+@Controller
 public class LoginController {
 
     @RequestMapping("/login")
@@ -16,9 +15,11 @@ public class LoginController {
         if (error!=null){
             model.addAttribute("error", "Неверный логин пароль!");
         }
+
          if (logout!=null){
              model.addAttribute("msg", "Вышли успешно!");
          }
+
         return "login";
     }
 }

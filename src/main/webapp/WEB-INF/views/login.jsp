@@ -13,7 +13,7 @@
 
             <form name="loginForm" action="<c:url value="/j_spring_security_check" /> " method="post">
                 <c:if test="${not empty error}">
-                    <div class="error" style="color: #ff0000">${error}</div>
+                    <div class="error" style="color: #ff0000; ">${error}</div>
                 </c:if>
                 <div class="form-group">
                     <label for="username">Пользователь: </label>
@@ -26,7 +26,7 @@
 
                 <input type="submit" value="Отправить" class="btn btn-default">
 
-                <input type="hidden" name="${_csrf.parametrName}" value="${_csrf.token}"/>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
 
         </div>
