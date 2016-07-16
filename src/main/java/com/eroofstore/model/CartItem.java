@@ -8,10 +8,10 @@ public class CartItem {
 
     public CartItem() {}
 
-    public CartItem(Product product, int quanity, double totalPrice) {
+    public CartItem(Product product) {
         this.product = product;
-        this.quanity = quanity;
-        this.totalPrice = totalPrice;
+        this.quanity = 1;
+        this.totalPrice = product.getProductPrice();
     }
 
     public Product getProduct() {
