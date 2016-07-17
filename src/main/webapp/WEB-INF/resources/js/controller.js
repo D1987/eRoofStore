@@ -21,7 +21,7 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
     };
 
     $scope.addToCart = function (productId) {
-        $http.put('/eRoofStore/rest/cart/add'+productId).success(function (data) {
+        $http.put('/eRoofStore/rest/cart/add/'+productId).success(function (data) {
             $scope.refreshCart($http.get('/eRoofStore/rest/cart/cartId'));
             alert("Товар успешно добавлен в корзину!");
         });
