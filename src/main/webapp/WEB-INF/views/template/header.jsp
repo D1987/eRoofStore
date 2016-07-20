@@ -45,7 +45,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="<c:url value="/"/>">Главная</a></li>
-                        <li><a href="<c:url value="/productList"/>">Товары</a></li>
+                        <li><a href="<c:url value="/product/productList"/>">Товары</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <ul class="nav navbar-nav pull-right">
                             <li><a href="<c:url value="/admin"/> ">Администратор</a></li>

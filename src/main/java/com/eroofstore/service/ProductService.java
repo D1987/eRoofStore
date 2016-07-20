@@ -1,11 +1,11 @@
-package com.eroofstore.dao;
+package com.eroofstore.service;
+
 
 import com.eroofstore.model.Product;
 
 import java.util.List;
 
-public interface ProductDao {
-
+public interface ProductService {
     List<Product> getProductList();
 
     Product getProductById(int id);
