@@ -49,6 +49,7 @@
                         <li><a href="#contact">Contact</a></li>
                         <ul class="nav navbar-nav pull-right">
                             <li><a href="<c:url value="/admin"/> ">Администратор</a></li>
+                            <li><a href="<c:url value="/register"/> ">Регистрация</a></li>
                         </ul>
                     </ul>
                 </div>
