@@ -26,7 +26,7 @@
 
         <div class="form-group">
             <label for="phone">Телефон</label>
-            <form:input path="phone" id="phone" class="form-Control"/>
+                <form:input path="customerPhone" id="phone" class="form-Control"/>
         </div>
 
         <div class="form-group">
@@ -43,54 +43,54 @@
 
         <div class="form-group">
             <label for="billingStreet">Улица</label>
-            <form:input path="billingAdress.streetName" id="billingStreet" class="form-Control"/>
+            <form:input path="billingAddress.streetName" id="billingStreet" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="billingCity">Город</label>
-            <form:input path="billingAdress.city" id="billingCity" class="form-Control"/>
+            <form:input path="billingAddress.city" id="billingCity" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="billingState">Область</label>
-            <form:input path="billingAdress.state" id="billingState" class="form-Control"/>
+            <form:input path="billingAddress.state" id="billingState" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="billingCountry">Страна</label>
-            <form:input path="billingAdress.country" id="billingCountry" class="form-Control"/>
+            <form:input path="billingAddress.country" id="billingCountry" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="billingZip">Zipcode</label>
-            <form:input path="billingAdress.zipСode" id="billingZip" class="form-Control"/>
+            <form:input path="billingAddress.zipCode" id="billingZip" class="form-Control"/>
         </div>
 
         <h3>Адрес доставки</h3>
 
         <div class="form-group">
             <label for="shippingStreet">Улица</label>
-            <form:input path="shippingAdress.streetName" id="billingStreet" class="form-Control"/>
+            <form:input path="shippingAddress.streetName" id="billingStreet" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="shippingCity">Город</label>
-            <form:input path="shippingAdress.city" id="shippingCity" class="form-Control"/>
+            <form:input path="shippingAddress.city" id="shippingCity" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="shippingState">Область</label>
-            <form:input path="shippingAdress.state" id="shippingState" class="form-Control"/>
+            <form:input path="shippingAddress.state" id="shippingState" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="shippingCountry">Страна</label>
-            <form:input path="shippingAdress.country" id="shippingCountry" class="form-Control"/>
+            <form:input path="shippingAddress.country" id="shippingCountry" class="form-Control"/>
         </div>
 
         <div class="form-group">
             <label for="shippingZip">Zipcode</label>
-            <form:input path="shippingAdress.zipСode" id="shippingZip" class="form-Control"/>
+            <form:input path="shippingAddress.zipCode" id="shippingZip" class="form-Control"/>
         </div>
 
 
