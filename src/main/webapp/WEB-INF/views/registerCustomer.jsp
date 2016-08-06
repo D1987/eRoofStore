@@ -15,12 +15,12 @@
         <h3>Базовая информация</h3>
 
         <div class="form-group">
-            <label for="name">Имя</label>
+            <label for="name">Имя</label><form:errors path="customerName" cssStyle="color: #ff0000"/>
             <form:input path="customerName" id="name" class="form-Control"/>
         </div>
 
         <div class="form-group">
-            <label for="email">E-mail</label>
+            <label for="email">E-mail</label><span style="color: #ff0000">${emailMsg}</span><form:errors path="customerEmail" cssStyle="color: #ff0000"/>
             <form:input path="customerEmail" id="email" class="form-Control"/>
         </div>
 
@@ -30,12 +30,12 @@
         </div>
 
         <div class="form-group">
-            <label for="username">Логин</label>
+            <label for="username">Логин</label><span style="color: #ff0000">${usernameMsg}</span><form:errors path="username" cssStyle="color: #ff0000"/>
             <form:input path="Username" id="username" class="form-Control"/>
         </div>
 
         <div class="form-group">
-            <label for="password">Пароль</label>
+            <label for="password">Пароль</label><form:errors path="password" cssStyle="color: #ff0000"/>
             <form:password path="password" id="password" class="form-Control"/>
         </div>
 

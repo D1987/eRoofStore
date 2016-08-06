@@ -7,19 +7,18 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Регистрация прошла успешно</h1>
+                    <h1>Благодарим за заказ!</h1>
+                    <p>Ваш заказ будет доставлен в течении двух рабочих дней!</p>
                 </div>
             </div>
         </section>
 
         <section class="container">
             <p>
-                <a href="<spring:url value="/product/productList"/>" class="btn btn-default">Товары</a>
+                <a href="<spring:url value="/"/>" class="btn btn-default">OK</a>
             </p>
         </section>
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-<script src="<c:url value="/resources/js/controller.js"/> "></script>
 <%@ include file="/WEB-INF/views/template/footer.jsp" %>

@@ -48,8 +48,20 @@
                         <li><a href="<c:url value="/product/productList"/>">Товары</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <ul class="nav navbar-nav pull-right">
-                            <li><a href="<c:url value="/admin"/> ">Администратор</a></li>
+                            <c:if test="${pageContext.request.userPrincipal.name !=null}">
+                                <li><a>Добро пожаловать: ${pageContext.request.userPrincipal.name}</a></li>
+                                <li><a href="<c:url value="/j_spring_security_logout"/>">Выход</a></li>
+                                <c:if test="${pageContext.request.userPrincipal.name !='admin'}">
+                                    <li><a href="<c:url value="/customer/cart"/>">Корзина</a></li>
+                                </c:if>
+                                <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+                                    <li><a href="<c:url value="/admin"/>">Администратор</a></li>
+                                </c:if>
+                            </c:if>
+                            <c:if test="${pageContext.request.userPrincipal.name == null}">
+                            <li><a href="<c:url value="/login"/> ">Логин</a></li>
                             <li><a href="<c:url value="/register"/> ">Регистрация</a></li>
+                            </c:if>
                         </ul>
                     </ul>
                 </div>

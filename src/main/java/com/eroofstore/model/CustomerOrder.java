@@ -1,18 +1,13 @@
 package com.eroofstore.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
-public class CustomerOrder implements Serializable {
+@Entity
+public class CustomerOrder implements Serializable{
 
-
-    private static final long serialVersionUID = 5776066968154646106L;
+    private static final long serialVersionUID = 2983360377227484514L;
 
     @Id
     @GeneratedValue
@@ -31,7 +26,7 @@ public class CustomerOrder implements Serializable {
     private BillingAddress billingAddress;
 
     @OneToOne
-    @JoinColumn(name = "shippingAddressId")
+    @JoinColumn(name="shippingAddressId")
     private ShippingAddress shippingAddress;
 
     public int getCustomerOrderId() {

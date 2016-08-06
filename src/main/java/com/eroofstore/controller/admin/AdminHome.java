@@ -1,6 +1,8 @@
 package com.eroofstore.controller.admin;
 
+import com.eroofstore.model.Customer;
 import com.eroofstore.model.Product;
+import com.eroofstore.service.CustomerService;
 import com.eroofstore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,9 @@ public class AdminHome {
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private CustomerService customerService;
+
     @RequestMapping
     public String adminPage(){
         return "admin";
@@ -30,7 +35,11 @@ public class AdminHome {
 
     @RequestMapping("/customer")
     public String customerManagment(Model model){
-        return "customerManagment";
+
+        List<Customer> customerList = customerService.getAllCustomers();
+        model.addAttribute("customerList",customerList);
+
+        return "customerManagement";
     }
 
 }

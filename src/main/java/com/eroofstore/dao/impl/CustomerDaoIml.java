@@ -64,4 +64,13 @@ public class CustomerDaoIml implements CustomerDao {
 
         return customerList;
     }
+
+    public Customer getCustomerByUsername(String username) {
+
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("from Customer where username = ?");
+        query.setString(0, username);
+
+        return (Customer) query.uniqueResult();
+    }
 }

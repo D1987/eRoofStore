@@ -1,18 +1,16 @@
-/**
- * Created by Dima on 16.07.16.
- */
 
-var cartApp = angular.module ("cartApp",[]);
+var cartApp = angular.module ("cartApp", []);
 
-cartApp.controller("cartCtrl", function ($scope, $http) {
-    $scope.refreshCart = function (cartId) {
+cartApp.controller("cartCtrl", function ($scope, $http){
+
+    $scope.refreshCart = function () {
         $http.get('/eRoofStore/rest/cart/'+$scope.cartId).success(function (data) {
             $scope.cart=data;
-        })
+        });
     };
 
     $scope.clearCart = function () {
-        $http.delete('/eRoofStore/rest/cart/'+$scope.cartId).success($scope.refreshCart($scope.cartId));
+        $http.delete('/eRoofStore/rest/cart/'+$scope.cartId).success($scope.refreshCart());
     };
 
     $scope.initCartId = function (cartId) {
@@ -21,16 +19,24 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
     };
 
     $scope.addToCart = function (productId) {
-        $http.put('/eRoofStore/rest/cart/add/'+productId).success(function (data) {
-            $scope.refreshCart($http.get('/eRoofStore/rest/cart/cartId'));
-            alert("Товар успешно добавлен в корзину!");
+        $http.put('/eRoofStore/rest/cart/add/'+productId).success(function () {
+            alert("Товар успешно добавлен в корзину!")
         });
     };
 
     $scope.removeFromCart = function (productId) {
         $http.put('/eRoofStore/rest/cart/remove/'+productId).success(function (data) {
-            $scope.refreshCart($http.get('/eRoofStore/rest/cart/cartId'));
+            $scope.refreshCart();
         });
     };
 
-})
+    $scope.calGrandTotal = function () {
+        var grandTotal=0;
+
+        for (var i=0; i<$scope.cart.cartItems.length; i++) {
+            grandTotal+=$scope.cart.cartItems[i].totalPrice;
+        }
+
+        return grandTotal;
+    };
+});
