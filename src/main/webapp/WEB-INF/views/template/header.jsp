@@ -15,6 +15,12 @@
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 
+    <%--Jquery--%>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <%--Data Table--%>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
 
@@ -23,6 +29,8 @@
 
     <!-- Main CSS -->
     <link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 
 </head>
 <!-- NAVBAR
@@ -40,13 +48,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Roof Store</a>
+                    <a class="navbar-brand" href="<c:url value="/" /> ">Roof Store</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="<c:url value="/"/>">Главная</a></li>
-                        <li><a href="<c:url value="/product/productList"/>">Товары</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="<c:url value="/product/productList/all"/>">Товары</a></li>
+                        <li><a href="<c:url value="/about" />">Контакты</a></li>
                         <ul class="nav navbar-nav pull-right">
                             <c:if test="${pageContext.request.userPrincipal.name !=null}">
                                 <li><a>Добро пожаловать: ${pageContext.request.userPrincipal.name}</a></li>
@@ -59,8 +67,8 @@
                                 </c:if>
                             </c:if>
                             <c:if test="${pageContext.request.userPrincipal.name == null}">
-                            <li><a href="<c:url value="/login"/> ">Логин</a></li>
-                            <li><a href="<c:url value="/register"/> ">Регистрация</a></li>
+                                <li><a href="<c:url value="/login"/> ">Логин</a></li>
+                                <li><a href="<c:url value="/register"/> ">Регистрация</a></li>
                             </c:if>
                         </ul>
                     </ul>

@@ -3,6 +3,17 @@
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<script>
+    $(document).ready(function(){
+        var searchCondition = '${searchCondition}';
+
+        $('.table').DataTable({
+            "lengthMenu": [[1,2,3,5,10,-1], [1,2,3,5,10, "Все"]],
+            "oSearch": {"sSearch": searchCondition}
+        });
+    });
+</script>
+
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
@@ -12,25 +23,25 @@
 
         <table class="table table-striped table-hover">
             <thead>
-                <tr class="bg-success">
-                    <th>Фото</th>
-                    <th>Название</th>
-                    <th>Категория</th>
-                    <th>Состояние</th>
-                    <th>Цена</th>
-                    <th></th>
-                </tr>
+            <tr class="bg-success">
+                <th>Фото</th>
+                <th>Название</th>
+                <th>Категория</th>
+                <th>Состояние</th>
+                <th>Цена</th>
+                <th></th>
+            </tr>
             </thead>
             <c:forEach items="${products}" var="product">
-            <tr>
-                <td><img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width:100%"/></td>
-                <td>${product.productName}</td>
-                <td>${product.productCategory}</td>
-                <td>${product.productCondition}</td>
-                <td>${product.productPrice} руб.</td>
-                <td><a href="<spring:url value="/product/viewProduct/${product.productId}"/> "
-                ><span class="glyphicon glyphicon-info-sign"></span></a></td>
-            </tr>
+                <tr>
+                    <td><img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width:100%"/></td>
+                    <td>${product.productName}</td>
+                    <td>${product.productCategory}</td>
+                    <td>${product.productCondition}</td>
+                    <td>${product.productPrice} руб.</td>
+                    <td><a href="<spring:url value="/product/viewProduct/${product.productId}"/> "
+                    ><span class="glyphicon glyphicon-info-sign"></span></a></td>
+                </tr>
             </c:forEach>
         </table>
 

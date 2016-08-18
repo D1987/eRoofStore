@@ -16,13 +16,18 @@ public class HomeController {
     @RequestMapping("/login")
     public String login(@RequestParam(value = "error", required = false) String error, @RequestParam(value = "logout",
             required = false)  String logout, Model model) {
-       if (error!=null){
-           model.addAttribute("error","Неправильный логин/пароль");
-       }
+        if (error!=null){
+            model.addAttribute("error","Неправильный логин/пароль");
+        }
 
         if (logout!=null){
             model.addAttribute("logout","Вы вышли успешно");
         }
         return "login";
+    }
+
+    @RequestMapping("/about")
+    public String about() {
+        return "about";
     }
 }

@@ -12,7 +12,7 @@
 
         <form:form action="${pageContext.request.contextPath}/admin/product/editProduct" method="post" commandName="product"
                    enctype="multipart/form-data">
-        <form:hidden path="productId" value="${product.productId}"/>
+            <form:hidden path="productId" value="${product.productId}"/>
 
         <div class="form-group">
             <label for="name">Наименование</label>
@@ -43,7 +43,7 @@
             <label for="condition">Состояние</label>
             <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="Новая"/>
                 Новая</label>
-            <label class="checkbox-inline"><form:radiobutton path="productCategory" id="condition" value="Б/у"/>
+            <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="Б/у"/>
                 Б/у</label>
         </div>
 
@@ -51,7 +51,7 @@
             <label for="status">Статус</label>
             <label class="checkbox-inline"><form:radiobutton path="productStatus" id="status" value="В наличии"/>
                 В наличии</label>
-            <label class="checkbox-inline"><form:radiobutton path="productCategory" id="status" value="Нет в наличии"/>
+            <label class="checkbox-inline"><form:radiobutton path="productStatus" id="status" value="Нет в наличии"/>
                 Нет в наличии</label>
         </div>
 
@@ -71,8 +71,8 @@
         </div>
 
         <br><br>
-        <input type="submit" value="Добавить" class="btn btn-default">
+        <input type="submit" value="Изменить" class="btn btn-default">
         <a href="<c:url value="/admin/productInventory"/> " class="btn btn-default">Отмена</a>
         </form:form>
 
-        <%@ include file="/WEB-INF/views/template/footer.jsp" %>
+<%@ include file="/WEB-INF/views/template/footer.jsp" %>

@@ -1,6 +1,7 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ include file="/WEB-INF/views/template/header.jsp" %>
+<%@include file="/WEB-INF/views/template/header.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 
 <!-- Carousel
 ================================================== -->
@@ -13,30 +14,45 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<c:url value="/resources/images/slide.png"/>" alt="First slide">
+            <img class="first-slide home-image"
+                 src="<c:url value="/resources/images/slide.png" />"
+                 alt="First slide">
+
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Добро пожаловать в наш магазин!</h1>
-                    <p>Здесь Вы можете выбрать и купить крышу.</p>
+                    <h1>Welcome to Le's Music Store</h1>
+
+                    <p>Here you can browse and buy Instruments, Records and music related Accessories. Order Now for
+                        Your Amazing New Kit!</p>
 
                 </div>
             </div>
         </div>
         <div class="item">
-            <img class="second-slide" src="<c:url value="/resources/images/slide2.jpg"/>" alt="Second slide">
+            <img class="second-slide home-image"
+                 src="<c:url value="/resources/images/slide2.jpg" />"
+                 alt="Second slide">
+
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Факты которые Вы должны знать о крыше.</h1>
-                    <p>Крыша защищает Вас от дождя.</p>
+                    <h1>Facts You Should Know About Music</h1>
+
+                    <p>Music brings joy, to all of our hearts, It's one of those, emotional arts.</p>
+
                 </div>
             </div>
         </div>
         <div class="item">
-            <img class="third-slide" src="<c:url value="/resources/images/slide3.png"/>" alt="Third slide">
+            <img class="third-slide home-image"
+                 src="<c:url value="/resources/images/slide3.png" />"
+                 alt="Third slide">
+
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Что то еще.</h1>
-                    <p>А что?</p>
+                    <h1>It's A Jazz Affair</h1>
+
+                    <p>Through ups and downs, Somehow I manage to survive in life.</p>
+
                 </div>
             </div>
         </div>
@@ -49,7 +65,8 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div><!-- /.carousel -->
+</div>
+<!-- /.carousel -->
 
 
 <!-- Marketing messaging and featurettes
@@ -61,24 +78,44 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=Кровля" />"
+               role="button">
+                <img class="img-circle" src="<c:url value="/resources/images/FIR_8207.JPG" />" alt="Instrument
+                Image" width="140" height="140"></a>
+
+            <h2>Кровля</h2>
+            <p>Well crafted and delicate instruments.</p>
+
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
 
 
-    <%@ include file="/WEB-INF/views/template/footer.jsp" %>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=Забор" />"
+                   role="button">
+                    <img class="img-circle" src="<c:url value="/resources/images/grillkota9_3.jpg" />" alt="Instrument
+                Image" width="140" height="140"></a>
+
+                <h2>Заборы</h2>
+                <p>An exceptional collections of music records in favor of the traditional and modern genre of jazz.</p>
+
+            </div><!-- /.col-lg-4 -->
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=Дверь" />"
+                       role="button">
+                        <img class="img-circle" src="<c:url value="/resources/images/L3.jpg" />" alt="Instrument
+                Image" width="140" height="140"></a>
+
+                    <h2>Двери</h2>
+                    <p>All musical and related geeky goods..</p>
+
+                </div><!-- /.col-lg-4 -->
+
+
+            </div><!-- /.row -->
+
+            <%@include file="/WEB-INF/views/template/footer.jsp" %>
+

@@ -26,7 +26,7 @@
 
         <div class="form-group">
             <label for="phone">Телефон</label>
-                <form:input path="customerPhone" id="phone" class="form-Control"/>
+            <form:input path="customerPhone" id="phone" class="form-Control"/>
         </div>
 
         <div class="form-group">
@@ -99,4 +99,4 @@
         <a href="<c:url value="/admin/productInventory"/> " class="btn btn-default">Отмена</a>
         </form:form>
 
-        <%@ include file="/WEB-INF/views/template/footer.jsp" %>
+<%@ include file="/WEB-INF/views/template/footer.jsp" %>

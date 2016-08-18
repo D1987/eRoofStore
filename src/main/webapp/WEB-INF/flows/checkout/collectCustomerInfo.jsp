@@ -70,4 +70,4 @@
         <button class="btn btn-default" name="_eventId_cancel">Отмена</button>
         </form:form>
 
-        <%@ include file="/WEB-INF/views/template/footer.jsp" %>
+<%@ include file="/WEB-INF/views/template/footer.jsp" %>

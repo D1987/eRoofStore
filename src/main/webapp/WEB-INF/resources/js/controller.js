@@ -1,4 +1,5 @@
 
+
 var cartApp = angular.module ("cartApp", []);
 
 cartApp.controller("cartCtrl", function ($scope, $http){
@@ -20,7 +21,7 @@ cartApp.controller("cartCtrl", function ($scope, $http){
 
     $scope.addToCart = function (productId) {
         $http.put('/eRoofStore/rest/cart/add/'+productId).success(function () {
-            alert("Товар успешно добавлен в корзину!")
+            alert("Product successfully added to the cart!")
         });
     };
 

@@ -3,6 +3,15 @@
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<script>
+    $(document).ready(function(){
+
+        $('.table').DataTable({
+            "lengthMenu": [[1,2,3,5,10,-1], [1,2,3,5,10, "Все"]]
+        });
+    });
+</script>
+
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
@@ -29,7 +38,7 @@
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} руб.</td>
                     <td><a href="<spring:url value="/product/viewProduct/${product.productId}"/> ">
-                    <span class="glyphicon glyphicon-info-sign"></span></a>
+                        <span class="glyphicon glyphicon-info-sign"></span></a>
                         <a href="<spring:url value="/admin/product/deleteProduct/${product.productId}"/> ">
                             <span class="glyphicon glyphicon-remove"></span></a>
                         <a href="<spring:url value="/admin/product/editProduct/${product.productId}"/> ">
@@ -43,4 +52,4 @@
 
         <a href="<spring:url value="/admin/product/addProduct"/>" class="btn btn-primary">Добавить товар</a>
 
-        <%@include file="/WEB-INF/views/template/footer.jsp" %>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>

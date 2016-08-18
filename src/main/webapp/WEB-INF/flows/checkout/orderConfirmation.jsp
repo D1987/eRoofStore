@@ -81,16 +81,16 @@
                                         <td class="col-md-1" style="text-align: center">${cartItem.totalPrice}</td>
                                     </tr>
                                 </c:forEach>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="text-right">
-                                            <h4><strong>Общая Цена: </strong></h4>
-                                        </td>
-                                        <td class="text-center text-danger">
-                                            <h4><strong>${order.cart.grandTotal} руб.</strong></h4>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">
+                                        <h4><strong>Общая Цена: </strong></h4>
+                                    </td>
+                                    <td class="text-center text-danger">
+                                        <h4><strong>${order.cart.grandTotal} руб.</strong></h4>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -106,4 +106,4 @@
             </div>
         </div>
 
-        <%@ include file="/WEB-INF/views/template/footer.jsp" %>
+<%@ include file="/WEB-INF/views/template/footer.jsp" %>

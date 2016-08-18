@@ -10,7 +10,7 @@
         <transition to="invalidCartWarning" on-exception="java.io.IOException"/>
         <transition to="collectCustomerInfo"/>
     </action-state>
-    
+
     <view-state id="collectCustomerInfo" view="collectCustomerInfo.jsp" model="order">
         <transition on="customerInfoCollected" to="collectShippingDetail"/>
     </view-state>
@@ -33,7 +33,7 @@
     <view-state id="thankCustomer" model="order">
         <transition to="endState"/>
     </view-state>
-    
+
     <end-state id="endState"/>
 
     <view-state id="invalidCartWarning">

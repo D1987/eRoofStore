@@ -33,8 +33,8 @@ public class AdminProduct {
     @RequestMapping("/product/addProduct")
     public String addProduct(Model model){
         Product product = new Product();
-        product.setProductCategory("кровля");
-        product.setProductCondition("новая");
+        product.setProductCategory("Кровля");
+        product.setProductCondition("Новая");
         product.setProductStatus("В наличии");
 
         model.addAttribute("product",product);
@@ -43,9 +43,9 @@ public class AdminProduct {
 
     @RequestMapping(value = "/product/addProduct", method = RequestMethod.POST)
     public String addProductPost(@Valid @ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request){
-       if (result.hasErrors()){
-        return "addProduct";
-       }
+        if (result.hasErrors()){
+            return "addProduct";
+        }
 
         productService.addProduct(product);
 
