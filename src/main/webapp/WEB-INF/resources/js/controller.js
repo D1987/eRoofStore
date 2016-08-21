@@ -1,4 +1,6 @@
-
+/**
+ * Created by Le on 1/11/2016.
+ */
 
 var cartApp = angular.module ("cartApp", []);
 
@@ -21,7 +23,7 @@ cartApp.controller("cartCtrl", function ($scope, $http){
 
     $scope.addToCart = function (productId) {
         $http.put('/eRoofStore/rest/cart/add/'+productId).success(function () {
-            alert("Product successfully added to the cart!")
+            alert("Товар успешно добавлен в корзину!")
         });
     };
 

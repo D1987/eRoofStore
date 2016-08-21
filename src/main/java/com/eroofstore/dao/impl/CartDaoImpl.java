@@ -11,6 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 
+/**
+ * Created by Le on 1/25/2016.
+ */
+
 @Repository
 @Transactional
 public class CartDaoImpl implements CartDao{
@@ -21,18 +25,9 @@ public class CartDaoImpl implements CartDao{
     @Autowired
     private CustomerOrderService customerOrderService;
 
-    public Cart getCartById(int cartId) {
+    public Cart getCartById (int cartId) {
         Session session = sessionFactory.getCurrentSession();
-        return (Cart) session.get(Cart.class,cartId);
-    }
-
-    public Cart validate(int cartId) throws IOException {
-        Cart cart = getCartById(cartId);
-        if (cart==null||cart.getCartItems().size()==0){
-            throw new IOException(cartId+"");
-        }
-        update(cart);
-        return cart;
+        return (Cart) session.get(Cart.class, cartId);
     }
 
     public void update(Cart cart) {
@@ -42,5 +37,14 @@ public class CartDaoImpl implements CartDao{
 
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(cart);
+    }
+
+    public Cart validate(int cartId) throws IOException {
+        Cart cart=getCartById(cartId);
+        if(cart==null||cart.getCartItems().size()==0) {
+            throw new IOException(cartId+"");
+        }
+        update(cart);
+        return cart;
     }
 }

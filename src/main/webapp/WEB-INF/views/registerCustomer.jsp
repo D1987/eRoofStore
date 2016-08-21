@@ -39,7 +39,7 @@
             <form:password path="password" id="password" class="form-Control"/>
         </div>
 
-        <h3>Billing адрес</h3>
+   <%--     <h3>Billing адрес</h3>
 
         <div class="form-group">
             <label for="billingStreet">Улица</label>
@@ -64,7 +64,7 @@
         <div class="form-group">
             <label for="billingZip">Zipcode</label>
             <form:input path="billingAddress.zipCode" id="billingZip" class="form-Control"/>
-        </div>
+        </div>--%>
 
         <h3>Адрес доставки</h3>
 

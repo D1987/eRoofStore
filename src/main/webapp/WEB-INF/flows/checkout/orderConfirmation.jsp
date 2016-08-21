@@ -45,7 +45,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                       <%-- <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <address>
                                     <strong>Адрес Billing</strong><br>
@@ -60,7 +60,7 @@
                                     <br>
                                 </address>
                             </div>
-                        </div>
+                        </div>--%>
 
                         <div class="row">
                             <table class="table table-hover">
@@ -97,7 +97,7 @@
                         <input type="hidden" name="_flowExecutionKey"/>
                         <br><br>
                         <button class="btn btn-default" name="_eventId_backToCollectShippingDetail">Назад</button>
-                        <input type="submit" value="Submit Order" class="btn btn-default"
+                        <input type="submit" value="Подтвердить" class="btn btn-default"
                                name="_eventId_orderConfirmed"/>
                         <button class="btn btn-default" name="_eventId_cancel">Отмена</button>
                     </div>

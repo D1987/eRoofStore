@@ -2,9 +2,12 @@ package com.eroofstore.service;
 
 import com.eroofstore.model.Cart;
 
+/**
+ * Created by Le on 1/25/2016.
+ */
 public interface CartService {
 
-    Cart getCartById(int cartId);
+    Cart getCartById (int cartId);
 
     void update(Cart cart);
 }

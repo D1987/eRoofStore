@@ -1,9 +1,11 @@
 package com.eroofstore.service;
 
-
 import com.eroofstore.model.Cart;
 import com.eroofstore.model.CartItem;
 
+/**
+ * Created by Le on 1/25/2016.
+ */
 public interface CartItemService {
 
         void addCartItem(CartItem cartItem);
@@ -12,5 +14,5 @@ public interface CartItemService {
 
         void removeAllCartItems(Cart cart);
 
-        CartItem getCartItemByProductId(int productId);
+        CartItem getCartItemByProductId (int productId);
 }

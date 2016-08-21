@@ -2,6 +2,7 @@
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
 <div class="container-wrapper">
     <div class="container">
         <section>
@@ -22,7 +23,7 @@
                     <a class="btn btn-danger pull-left" ng-click="clearCart()">
                         <span class="glyphicon glyphicon-remove-sign"></span> Очистить Корзину</a>
                     <a href="<spring:url value="/order/${cartId}"/>"
-                       class="btn btn-success pull-right"><span class="glyphicon-shopping-cart glyphicon"></span> Проверить
+                       class="btn btn-success pull-right"><span class="glyphicon-shopping-cart glyphicon"></span> Корзина
                     </a>
                 </div>
 
@@ -51,11 +52,12 @@
                     </tr>
                 </table>
 
-                <a href="<spring:url value="/product/productList"/>" class="btn btn-default">Продолжить покупки</a>
+                <a href="<spring:url value="/product/productList/all"/>" class="btn btn-default">Продолжить покупки</a>
             </div>
         </section>
     </div>
 </div>
 
-<script src="<c:url value="/resources/js/controller.js"/> "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script src="<c:url value="/resources/js/controller.js" /> "></script>
 <%@ include file="/WEB-INF/views/template/footer.jsp" %>

@@ -6,10 +6,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * Created by Le on 1/11/2016.
+ */
+
 @Entity
 public class Cart implements Serializable {
 
-    private static final long serialVersionUID = -1524093067116222319L;
+    private static final long serialVersionUID = 3940548625296145582L;
 
     @Id
     @GeneratedValue

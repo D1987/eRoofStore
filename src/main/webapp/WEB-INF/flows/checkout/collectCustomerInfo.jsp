@@ -30,7 +30,7 @@
         </div>
 
 
-        <h3>Billing адрес</h3>
+   <%--     <h3>Billing адрес</h3>
 
         <div class="form-group">
             <label for="billingStreet">Улица</label>
@@ -62,7 +62,7 @@
             <form:input path="cart.customer.billingAddress.zipCode" id="billingZip" class="form-Control"/>
         </div>
 
-        <input type="hidden" name="_flowExecutionKey"/>
+        <input type="hidden" name="_flowExecutionKey"/>--%>
 
 
         <br><br>

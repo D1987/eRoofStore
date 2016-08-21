@@ -12,7 +12,7 @@
 
         <form:form commandName="order" class="form-horizaontal">
 
-        <h3>Shipping адрес</h3>
+        <h3>Адрес доставки</h3>
 
         <div class="form-group">
             <label for="shippingStreet">Улица</label>

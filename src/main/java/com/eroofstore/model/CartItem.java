@@ -5,10 +5,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.io.Serializable;
 
+/**
+ * Created by Le on 1/11/2016.
+ */
 @Entity
-public class CartItem implements Serializable {
+public class CartItem implements Serializable{
 
-    private static final long serialVersionUID = -7691818402015607083L;
+    private static final long serialVersionUID = -904360230041854157L;
 
     @Id
     @GeneratedValue
@@ -21,7 +24,6 @@ public class CartItem implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "productId")
-    @JsonIgnore
     private Product product;
 
     private int quantity;

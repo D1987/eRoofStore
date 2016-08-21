@@ -7,7 +7,7 @@
     $(document).ready(function(){
 
         $('.table').DataTable({
-            "lengthMenu": [[1,2,3,5,10,-1], [1,2,3,5,10, "Все"]]
+            "lengthMenu": [[5,10, 25, 50, -1], [5,10, 25, 50, "Все"]]
         });
     });
 </script>

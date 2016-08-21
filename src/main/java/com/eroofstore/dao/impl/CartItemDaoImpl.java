@@ -12,6 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * Created by Le on 1/25/2016.
+ */
+
 @Repository
 @Transactional
 public class CartItemDaoImpl implements CartItemDao{
@@ -25,7 +29,7 @@ public class CartItemDaoImpl implements CartItemDao{
         session.flush();
     }
 
-    public void removeCartItem(CartItem cartItem) {
+    public void removeCartItem (CartItem cartItem) {
         Session session = sessionFactory.getCurrentSession();
         session.delete(cartItem);
         session.flush();
@@ -34,20 +38,17 @@ public class CartItemDaoImpl implements CartItemDao{
     public void removeAllCartItems(Cart cart) {
         List<CartItem> cartItems = cart.getCartItems();
 
-        for (CartItem item: cartItems){
+        for (CartItem item : cartItems) {
             removeCartItem(item);
         }
     }
 
-    public CartItem getCartItemByProductId(int productId) {
+    public CartItem getCartItemByProductId (int productId) {
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery("from CartItem where productId = ?");
-        query.setInteger(0,productId);
+        query.setInteger(0, productId);
         session.flush();
+
         return (CartItem) query.uniqueResult();
     }
-
-
-
-
 }
