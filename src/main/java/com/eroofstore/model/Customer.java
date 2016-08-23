@@ -30,9 +30,9 @@ public class Customer implements Serializable{
 
     private boolean enabled;
 
-    @OneToOne
+    /*@OneToOne
     @JoinColumn(name = "billingAddressId")
-    private BillingAddress billingAddress;
+    private BillingAddress billingAddress;*/
 
     @OneToOne
     @JoinColumn(name = "shippingAddressId")
@@ -43,13 +43,13 @@ public class Customer implements Serializable{
     @JsonIgnore
     private Cart cart;
 
-    public BillingAddress getBillingAddress() {
+    /*public BillingAddress getBillingAddress() {
         return billingAddress;
     }
 
     public void setBillingAddress(BillingAddress billingAddress) {
         this.billingAddress = billingAddress;
-    }
+    }*/
 
     public ShippingAddress getShippingAddress() {
         return shippingAddress;

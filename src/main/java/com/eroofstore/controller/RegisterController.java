@@ -24,9 +24,9 @@ public class RegisterController {
     @RequestMapping("/register")
     public String registerCustomer(Model model){
         Customer customer = new Customer();
-        BillingAddress billingAddress = new BillingAddress();
+        //BillingAddress billingAddress = new BillingAddress();
         ShippingAddress shippingAddress = new ShippingAddress();
-        customer.setBillingAddress(billingAddress);
+        //customer.setBillingAddress(billingAddress);
         customer.setShippingAddress(shippingAddress);
 
         model.addAttribute("customer",customer);
