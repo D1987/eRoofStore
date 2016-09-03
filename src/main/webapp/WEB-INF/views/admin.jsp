@@ -15,16 +15,16 @@
         </c:if>
 
         <h3>
-            <a href="<c:url value="/admin/productInventory" />"> Запас Товаров</a>
+            <a href="<c:url value="/admin/productInventory" />"> Управление товарами</a>
         </h3>
 
         <p>Здесь Вы можете просмотреть, проверить  и изменить запасы товаров</p>
 
         <h3>
-            <a href="<c:url value="/admin/customer" />"> Кабинет клиента</a>
+            <a href="<c:url value="/admin/customer" />"> Заказы</a>
         </h3>
 
-        <p>Здесь Вы можете просмотреть информацию о клиенте</p>
+        <p>Здесь Вы можете просмотреть информацию об оформленных заказах</p>
 
 
 

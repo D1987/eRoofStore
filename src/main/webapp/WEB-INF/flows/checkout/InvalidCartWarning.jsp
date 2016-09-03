@@ -7,7 +7,7 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Корзина недоступна</h1>
+                    <h1>В Вашей корзине нет товаров</h1>
                 </div>
             </div>
         </section>

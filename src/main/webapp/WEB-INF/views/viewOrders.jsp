@@ -14,23 +14,20 @@
     });
 </script>
 
-
-
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Все товары</h1>
-            <p class="lead">Проверить все доступные товары</p>
+            <h1>Подтвержденные заказы</h1>
+            <p class="lead">Здесь показаны оформленные заказы</p>
         </div>
 
         <table class="table table-striped table-hover">
             <thead>
             <tr class="bg-success">
-                <th>Фото</th>
-                <th>Название</th>
-                <th>Категория</th>
-                <th>Состояние</th>
-                <th>Цена</th>
+                <th>Клиент</th>
+                <th>Дата оформления</th>
+                <th>Квитанция</th>
+                <th>Подтвердить</th>
                 <th></th>
             </tr>
             </thead>

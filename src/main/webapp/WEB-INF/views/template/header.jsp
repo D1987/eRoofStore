@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Roof Store</title>
+    <title>DoorsAn</title>
 
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
@@ -19,6 +19,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <%--Data Table--%>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.12/i18n/Russian.json"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
     <!-- Bootstrap core CSS -->
@@ -48,7 +50,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<c:url value="/" /> ">Roof Store</a>
+                    <a class="navbar-brand" href="<c:url value="/" /> ">DoorsAn</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

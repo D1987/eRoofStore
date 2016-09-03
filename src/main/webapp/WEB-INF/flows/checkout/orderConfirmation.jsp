@@ -98,7 +98,7 @@
                         <br><br>
                         <button class="btn btn-default" name="_eventId_backToCollectShippingDetail">Назад</button>
                         <input type="submit" value="Подтвердить" class="btn btn-default"
-                               name="_eventId_orderConfirmed"/>
+                               name="_eventId_orderConfirmed" <%--onclick="${customer.setEnabled(true)}"--%>/>
                         <button class="btn btn-default" name="_eventId_cancel">Отмена</button>
                     </div>
                 </form:form>

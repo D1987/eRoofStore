@@ -4,6 +4,8 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
     <var name="order" class="com.eroofstore.model.CustomerOrder"/>
+    <!--my-->
+    <!--<var name="customer" class="com.eroofstore.model.Customer"/>-->
 
     <action-state id="addCartToOrder">
         <evaluate expression="cartDaoImpl.validate(requestParameters.cartId)" result="order.cart"/>
@@ -26,6 +28,7 @@
     </view-state>
 
     <action-state id="processOrder">
+        <!--<evaluate expression="customerDaoIml.getCustomerById(currentUser).enabled(false)"/>-->
         <evaluate expression="cartItemDaoImpl.removeAllCartItems(order.cart)"/>
         <transition to="thankCustomer"/>
     </action-state>

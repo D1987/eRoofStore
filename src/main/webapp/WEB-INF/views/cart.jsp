@@ -23,7 +23,7 @@
                     <a class="btn btn-danger pull-left" ng-click="clearCart()">
                         <span class="glyphicon glyphicon-remove-sign"></span> Очистить Корзину</a>
                     <a href="<spring:url value="/order/${cartId}"/>"
-                       class="btn btn-success pull-right"><span class="glyphicon-shopping-cart glyphicon"></span> Корзина
+                       class="btn btn-success pull-right"><span class="glyphicon-shopping-cart glyphicon"></span> Оформить
                     </a>
                 </div>
 

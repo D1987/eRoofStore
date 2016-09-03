@@ -6,13 +6,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/webflow-config http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd">
 
 
-
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/eroofstore"/>
         <property name="username" value="root" />
         <property name="password" value="root" />
     </bean>
+
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://node38432-doorsan.mycloud.by/eroofstore"/>
+        <property name="username" value="root" />
+        <property name="password" value="CYQclx63747" />
+    </bean>-->
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
         <property name="dataSource" ref="dataSource"/>
@@ -24,11 +30,6 @@
                 <prop key="hibernate.format_sql">true</prop>
             </props>
         </property>
-
-
-
-
-
 
     <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -79,8 +80,8 @@
     <security:authentication-manager>
         <security:authentication-provider>
             <security:jdbc-user-service data-source-ref="dataSource"
-                                        authorities-by-username-query="SELECT USERNAME, AUTHORITY FROM AUTHORITIES  WHERE USERNAME=?"
-                                        users-by-username-query="SELECT USERNAME, PASSWORD, ENABLED FROM USERS WHERE USERNAME=?"/>
+                                        authorities-by-username-query="SELECT username, authority FROM Authorities WHERE username=?"
+                                        users-by-username-query="SELECT username, password, enabled FROM Users WHERE username=?"/>
         </security:authentication-provider>
     </security:authentication-manager>
 
